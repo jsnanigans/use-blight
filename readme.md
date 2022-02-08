@@ -16,6 +16,43 @@ const Button: FC = () => {
 ```tsx
 const Input: FC = () => {
   const $ = usePlight({ name: "" });
-  return <input value={$.name} onChange={({ target }) => ($.name = target.value)} />;
+  return (
+    <input value={$.name} onChange={({ target }) => ($.name = target.value)} />
+  );
+};
+```
+
+```tsx
+const Todo = () => {
+  const $items = usePlight([{ id: 1, text: "Text", done: true }]);
+
+  const addItem = () => {
+    // thats right, push works
+    $items.push({
+      id: Date.now(),
+      text: "New item",
+      done: false,
+    });
+  };
+
+  const handleChangeDone = (item) => {
+    // just set the value :)
+    item.done = !item.done;
+  };
+
+  return (
+    <>
+      {$items.map((item) => (
+        <div key={item.id}>
+          <input
+            type="checkbox"
+            checked={item.done}
+            onChange={() => handleChangeDone(item)}
+          />
+          <span>{item.text}</span>
+        </div>
+      ))}
+    </>
+  );
 };
 ```
