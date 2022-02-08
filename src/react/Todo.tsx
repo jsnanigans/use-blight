@@ -22,6 +22,11 @@ const Todo = () => {
     });
   };
 
+  const handleChangeDone = (item: Items) => {
+    // just set the value :)
+    item.done = !item.done;
+  };
+
   return (
     <div>
       <h2>Todo list:</h2>
@@ -32,7 +37,7 @@ const Todo = () => {
               {" "}
               <input
                 type="checkbox"
-                onChange={() => (item.done = !item.done)}
+                onChange={() => handleChangeDone(item)}
               ></input>{" "}
             </td>
             <td>

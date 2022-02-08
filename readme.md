@@ -52,6 +52,7 @@ const Todo = () => {
           <span>{item.text}</span>
         </div>
       ))}
+      <button onClick={addItem}>Add</button>
     </>
   );
 };
