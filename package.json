@@ -8,12 +8,7 @@
   "keywords": [
     "react",
     "typescript",
-    "rxjs",
-    "state-management",
-    "reactjs",
-    "observer-pattern",
-    "bloc",
-    "bloc-pattern"
+    "react hook"
   ],
   "scripts": {
     "dev": "vite",
