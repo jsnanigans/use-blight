@@ -1,6 +1,6 @@
 {
   "name": "use-plight",
-  "version": "0.2.2",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "dist/use-plight.js",
   "module": "dist/use-plight.esm.js",
