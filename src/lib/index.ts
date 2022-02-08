@@ -10,10 +10,8 @@ export default function usePlight<T extends Record<any, unknown>>(data: T): T {
       },
 
       set(target, name, value, receiver) {
-        const [, set] = stateHook;
-        const v = Reflect.set(target, name, value, receiver);
-        set({ ...data });
-        return v;
+        stateHook[1]({ ...data });
+        return Reflect.set(target, name, value, receiver);
       },
     });
   }, []);

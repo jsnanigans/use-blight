@@ -1,18 +1,15 @@
-import { __assign } from 'tslib';
 import { useState, useMemo } from 'react';
 
 function usePlight(data) {
-    var stateHook = useState(data);
-    var proxy = useMemo(function () {
+    const stateHook = useState(data);
+    const proxy = useMemo(() => {
         return new Proxy(data, {
-            get: function (target, name, receiver) {
+            get(target, name, receiver) {
                 return Reflect.get(target, name, receiver);
             },
-            set: function (target, name, value, receiver) {
-                var set = stateHook[1];
-                var v = Reflect.set(target, name, value, receiver);
-                set(__assign({}, data));
-                return v;
+            set(target, name, value, receiver) {
+                stateHook[1]({ ...data });
+                return Reflect.set(target, name, value, receiver);
             },
         });
     }, []);
