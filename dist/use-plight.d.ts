@@ -1,3 +1,3 @@
-declare function usePlight<T extends Record<any, unknown>>(data: T): T;
+declare function usePlight<T extends any[] | Record<any, unknown>>(value: T): T;
 
 export { usePlight as default };
