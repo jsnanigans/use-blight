@@ -1,11 +1,11 @@
-# usePlight
+# useBlight
 
 Taking a step back from react back to JS.
 A simpler alternative to `useState`, no more set functions, just change the variable.
 
 ```tsx
 const Button: FC = () => {
-  const $ = usePlight({ x: 0 });
+  const $ = useBlight({ x: 0 });
 
   const handleClick = () => ++$.x;
 
@@ -15,7 +15,7 @@ const Button: FC = () => {
 
 ```tsx
 const Input: FC = () => {
-  const $ = usePlight({ name: "" });
+  const $ = useBlight({ name: "" });
   return (
     <input value={$.name} onChange={({ target }) => ($.name = target.value)} />
   );
@@ -24,7 +24,7 @@ const Input: FC = () => {
 
 ```tsx
 const Todo = () => {
-  const $items = usePlight([{ id: 1, text: "Text", done: true }]);
+  const $items = useBlight([{ id: 1, text: "Text", done: true }]);
 
   const addItem = () => {
     // thats right, push works

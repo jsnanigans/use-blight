@@ -1,10 +1,10 @@
 {
-  "name": "use-plight",
+  "name": "use-blight",
   "version": "0.0.2",
   "license": "MIT",
-  "main": "dist/use-plight.js",
-  "module": "dist/use-plight.esm.js",
-  "typings": "dist/use-plight.d.ts",
+  "main": "dist/use-blight.js",
+  "module": "dist/use-blight.esm.js",
+  "typings": "dist/use-blight.d.ts",
   "keywords": [
     "react",
     "typescript",

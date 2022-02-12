@@ -1,5 +1,5 @@
 import React from "react";
-import usePlight from "../lib";
+import useBlight from "../lib";
 
 interface Items {
   id: number;
@@ -9,7 +9,7 @@ interface Items {
 }
 
 const Todo = () => {
-  const $items = usePlight<Items[]>([
+  const $items = useBlight<Items[]>([
     { id: 1, text: "Text", done: true, list: ["1", "2"] },
   ]);
 

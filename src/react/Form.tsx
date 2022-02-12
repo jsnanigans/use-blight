@@ -1,8 +1,8 @@
 import React from "react";
-import usePlight from "../lib";
+import useBlight from "../lib";
 
 const Form = () => {
-  const $ = usePlight({
+  const $ = useBlight({
     name: "",
     email: "",
     message: "",

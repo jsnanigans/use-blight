@@ -22,7 +22,7 @@ const modify = (data: any, setX: (data: any) => void) =>
     },
   });
 
-export default function usePlight<T extends any[] | Record<any, unknown>>(
+export default function useBlight<T extends any[] | Record<any, unknown>>(
   value: T
 ): T {
   const [, setX] = useState(value);
