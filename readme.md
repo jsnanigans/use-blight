@@ -3,6 +3,10 @@
 Taking a step back from react back to JS.
 A simpler alternative to `useState`, no more set functions, just change the variable.
 
+```bash
+yarn add use-blight
+```
+
 ```tsx
 const Button: FC = () => {
   const $ = useBlight({ x: 0 });
