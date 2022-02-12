@@ -3,6 +3,9 @@
 Taking a step back from react back to JS.
 A simpler alternative to `useState`, no more set functions, just change the variable.
 
+## Don't use this in production
+## This is just an experiment
+
 ```bash
 yarn add use-blight
 ```
